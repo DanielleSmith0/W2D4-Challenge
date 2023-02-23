@@ -51,3 +51,20 @@ function isPalindrome2(str) {
     
     return false
 }
+
+//Lastly, implrovement on our solution:
+
+function isPal(str) {
+    for (let i = 0; i < str.length; i++) {
+        let charF = str[i]
+        let charB = str[str.length - 1 - i]
+
+        if (charF !== charB) {
+            return false
+        }
+    }
+
+    return true
+}
+
+console.log(isPal('hello'))
